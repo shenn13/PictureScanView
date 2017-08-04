@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "PictureScanView.h"
+#import "PictureViewController.h"
+#import "GifViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSArray *_dataArr;
+}
 
 @end
 
@@ -19,30 +22,56 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+ 
+    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画"];
+  
     
-    self.view.backgroundColor = [UIColor yellowColor];
+}
+
+
+
+#pragma mark - TableViewDelegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
-    button.center = self.view.center;
-    [button setTitle:@"点击" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor whiteColor]];
-    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    return _dataArr.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellID = @"cellID";
+    UITableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.textLabel.text = _dataArr[indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        [self.navigationController pushViewController:[PictureViewController new] animated:YES];
+    }
+    if (indexPath.row == 1) {
+       [self.navigationController pushViewController:[GifViewController new] animated:YES];
+    }
+    if (indexPath.row == 2) {
+        
+  
+    }
     
     
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
+    return 80;
+}
+
+
+
 
 -(void)buttonClicked{
   
     
-    PictureScanView *pic = [[PictureScanView alloc] initWithFrame:self.view.bounds];
-    [pic createUIWithImage:[UIImage imageNamed:@"test0.jpg"] ImgUrl:nil];
-    
-    pic.backgroundColor = [UIColor blackColor];
-
-    [self.view addSubview:pic];
+   
     
     
 }

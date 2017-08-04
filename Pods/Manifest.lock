@@ -1,14 +1,19 @@
 PODS:
+  - OLImageView (1.5.1):
+    - OLImageView/Core (= 1.5.1)
+  - OLImageView/Core (1.5.1)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
+  - OLImageView
   - SDWebImage
 
 SPEC CHECKSUMS:
+  OLImageView: e03cd533ce6b1a155acb9f708ab9b2e71ea070d5
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: 9d9065102abbab485ebafd1da0604dde4d52ad0c
+PODFILE CHECKSUM: d4daf00ee4e17192a4bd7a791b0b680cf63e6cd7
 
 COCOAPODS: 1.2.1

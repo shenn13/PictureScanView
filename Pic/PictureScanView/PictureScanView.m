@@ -8,8 +8,6 @@
 
 #import "PictureScanView.h"
 
-#import "SDImageCache.h"
-#import "UIImageView+WebCache.h"
 
 @interface PictureScanView ()<UIScrollViewDelegate>
 

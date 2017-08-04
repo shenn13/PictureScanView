@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OLImageView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Pic.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CAA5B2B575F65AA1D98EB8E56BC53D1</key>
+		<key>C0EAA7E9B4F5503FC4E0C8B1D564595E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A509DB123F18EE8D61F7B1D6A8963456</key>
+		<key>D8D837F739121C23C4C1286203E7D6B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB77108A59FDE63AA863A2DF3D9F8DCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
