@@ -16,6 +16,8 @@
 		C518E0B41F330FD100F13113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C518E0B21F330FD100F13113 /* LaunchScreen.storyboard */; };
 		C518E0BF1F330FD100F13113 /* PicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C518E0BE1F330FD100F13113 /* PicTests.m */; };
 		C518E0CA1F330FD100F13113 /* PicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C518E0C91F330FD100F13113 /* PicUITests.m */; };
+		C559A7691F382C230066F1EE /* HWWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7681F382C230066F1EE /* HWWaveView.m */; };
+		C559A7721F382C630066F1EE /* HWWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7711F382C630066F1EE /* HWWaveViewController.m */; };
 		C564058F1F346C75006ABE77 /* PictureScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = C564058E1F346C75006ABE77 /* PictureScanView.m */; };
 		C56405931F346F3F006ABE77 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56405921F346F3F006ABE77 /* PictureViewController.m */; };
 		C56405971F346F91006ABE77 /* GifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56405961F346F91006ABE77 /* GifViewController.m */; };
@@ -93,6 +95,10 @@
 		C518E0C51F330FD100F13113 /* PicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C518E0C91F330FD100F13113 /* PicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicUITests.m; sourceTree = "<group>"; };
 		C518E0CB1F330FD100F13113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C559A7671F382C230066F1EE /* HWWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWaveView.h; sourceTree = "<group>"; };
+		C559A7681F382C230066F1EE /* HWWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWaveView.m; sourceTree = "<group>"; };
+		C559A7701F382C630066F1EE /* HWWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWaveViewController.h; sourceTree = "<group>"; };
+		C559A7711F382C630066F1EE /* HWWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWaveViewController.m; sourceTree = "<group>"; };
 		C564058D1F346C75006ABE77 /* PictureScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureScanView.h; sourceTree = "<group>"; };
 		C564058E1F346C75006ABE77 /* PictureScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureScanView.m; sourceTree = "<group>"; };
 		C56405901F346E07006ABE77 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 		C518E0A31F330FD100F13113 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				C559A7661F382C230066F1EE /* AnimationEffectView */,
 				C564059B1F347AAC006ABE77 /* Resource */,
 				C56405941F346F80006ABE77 /* GIF */,
 				C564058C1F346C75006ABE77 /* PictureScanView */,
@@ -238,6 +245,17 @@
 				C518E0CB1F330FD100F13113 /* Info.plist */,
 			);
 			path = PicUITests;
+			sourceTree = "<group>";
+		};
+		C559A7661F382C230066F1EE /* AnimationEffectView */ = {
+			isa = PBXGroup;
+			children = (
+				C559A7671F382C230066F1EE /* HWWaveView.h */,
+				C559A7681F382C230066F1EE /* HWWaveView.m */,
+				C559A7701F382C630066F1EE /* HWWaveViewController.h */,
+				C559A7711F382C630066F1EE /* HWWaveViewController.m */,
+			);
+			path = AnimationEffectView;
 			sourceTree = "<group>";
 		};
 		C564058C1F346C75006ABE77 /* PictureScanView */ = {
@@ -539,6 +557,8 @@
 			files = (
 				C564058F1F346C75006ABE77 /* PictureScanView.m in Sources */,
 				C56405931F346F3F006ABE77 /* PictureViewController.m in Sources */,
+				C559A7721F382C630066F1EE /* HWWaveViewController.m in Sources */,
+				C559A7691F382C230066F1EE /* HWWaveView.m in Sources */,
 				C518E0AC1F330FD100F13113 /* ViewController.m in Sources */,
 				C56405971F346F91006ABE77 /* GifViewController.m in Sources */,
 				C518E0A91F330FD100F13113 /* AppDelegate.m in Sources */,

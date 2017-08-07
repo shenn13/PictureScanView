@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PictureViewController.h"
 #import "GifViewController.h"
+#import "HWWaveViewController.h"
 
 @interface ViewController (){
     NSArray *_dataArr;
@@ -23,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
  
-    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画"];
+    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效"];
   
     
 }
@@ -56,7 +57,7 @@
     }
     if (indexPath.row == 2) {
         
-  
+     [self.navigationController pushViewController:[HWWaveViewController new] animated:YES];
     }
     
     
