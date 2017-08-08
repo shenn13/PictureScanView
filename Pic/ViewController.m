@@ -10,7 +10,7 @@
 #import "PictureViewController.h"
 #import "GifViewController.h"
 #import "HWWaveViewController.h"
-
+#import "suijiViewController.h"
 @interface ViewController (){
     NSArray *_dataArr;
 }
@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
  
-    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效"];
+    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效",@"获取随机验证码"];
   
     
 }
@@ -59,6 +59,11 @@
         
      [self.navigationController pushViewController:[HWWaveViewController new] animated:YES];
     }
+    if (indexPath.row == 3) {
+        
+        [self.navigationController pushViewController:[suijiViewController new] animated:YES];
+    }
+    
     
     
 }
