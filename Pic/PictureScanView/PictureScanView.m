@@ -19,19 +19,33 @@
 
 @implementation PictureScanView
 
+static PictureScanView *picView = nil;
+
++(instancetype)share{
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        picView = [[PictureScanView alloc]init];
+        picView.userInteractionEnabled = YES;
+    });
+    return picView;
+}
+
 -(void)createUIWithImage:(UIImage *)image ImgUrl:(NSString *)imageUrl
 {
     if (imageUrl == nil && image == nil) {
         return;
     }
-    _scrollView = [[UIScrollView alloc]initWithFrame:self.bounds];
+    _scrollView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _scrollView.delegate = self;
     _scrollView.minimumZoomScale = 1;
     _scrollView.maximumZoomScale = 3;
+    _scrollView.userInteractionEnabled = YES;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
-    
-    self.imageView = [[UIImageView alloc]initWithFrame:self.bounds];
+    _scrollView.backgroundColor = [UIColor blackColor];
+    self.imageView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.userInteractionEnabled = YES;
     if (imageUrl == nil) {
@@ -44,7 +58,6 @@
         [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         }];
     }
-    [_scrollView addSubview:_imageView];
     //一个手指
     UITapGestureRecognizer *singleClickDog = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singliDogTap:)];
     UITapGestureRecognizer *doubleClickTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
@@ -54,12 +67,16 @@
     singleClickDog.numberOfTouchesRequired = 1;
     doubleClickTap.numberOfTapsRequired = 2;//需要点两下
     twoFingerTap.numberOfTouchesRequired = 2;
-    [_imageView addGestureRecognizer:singleClickDog];
+   
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:self];
+    [window addSubview:_scrollView];
+    [_scrollView addSubview:_imageView];
+    [_scrollView setZoomScale:1];
     [_imageView addGestureRecognizer:doubleClickTap];
     [_imageView addGestureRecognizer:twoFingerTap];
     [singleClickDog requireGestureRecognizerToFail:doubleClickTap];//如果双击了，则不响应单击事件
-    [_scrollView setZoomScale:1];
-    [self addSubview:_scrollView];
+    [window addGestureRecognizer:singleClickDog];
 }
 
 #pragma mark - ScrollView Delegate
@@ -76,10 +93,11 @@
 #pragma mark - 事件处理
 -(void)singliDogTap:(UITapGestureRecognizer *)gestureRecognizer
 {
-  
+    NSLog(@"---------------------");
     if (gestureRecognizer.numberOfTapsRequired == 1)
     {
        [self removeFromSuperview];
+        [_scrollView removeFromSuperview];
     }
 }
 -(void)handleDoubleTap:(UITapGestureRecognizer *)gestureRecognizer{

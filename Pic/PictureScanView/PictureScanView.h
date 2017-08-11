@@ -12,6 +12,8 @@
 
 @interface PictureScanView : UIView
 
++ (instancetype)share;
+
 -(void)createUIWithImage:(UIImage *)image ImgUrl:(NSString *)imageUrl;
 
 @end

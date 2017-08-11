@@ -29,14 +29,11 @@
 }
 -(void)buttonClicked{
     
+    [[PictureScanView share] createUIWithImage:[UIImage imageNamed:@"test0.jpg"] ImgUrl:nil];
+
     
-    PictureScanView *pic = [[PictureScanView alloc] initWithFrame:self.view.bounds];
-    [pic createUIWithImage:[UIImage imageNamed:@"test0.jpg"] ImgUrl:nil];
-    
-    pic.backgroundColor = [UIColor blackColor];
-    
-    [self.view addSubview:pic];
-    
+
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
