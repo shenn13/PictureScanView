@@ -31,8 +31,6 @@
     
     [[PictureScanView share] createUIWithImage:[UIImage imageNamed:@"test0.jpg"] ImgUrl:nil];
 
-    
-
 
 }
 - (void)didReceiveMemoryWarning {

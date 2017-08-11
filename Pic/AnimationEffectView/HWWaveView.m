@@ -1,9 +1,9 @@
 //
 //  HWWaveView.m
-//  HWProgress
+//  Pic
 //
-//  Created by sxmaps_w on 2017/3/3.
-//  Copyright © 2017年 hero_wqb. All rights reserved.
+//  Created by 沈增光 on 2017/8/9.
+//  Copyright © 2017年 沈增光. All rights reserved.
 //
 
 #import "HWWaveView.h"

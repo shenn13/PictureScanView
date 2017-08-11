@@ -1,9 +1,9 @@
 //
 //  LoadButton.h
-//  IGas
+//  Pic
 //
-//  Created by jk on 2017/2/25.
-//  Copyright © 2017年 Goldcard. All rights reserved.
+//  Created by 沈增光 on 2017/8/9.
+//  Copyright © 2017年 沈增光. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
