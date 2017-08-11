@@ -73,6 +73,14 @@
     
     
     
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
+    button.center = self.view.center;
+    [button setTitle:@"点击" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor yellowColor]];
+    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
     //添加手势，用来隐藏键盘
     
     UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToHideTheKeyBoard:)];
@@ -96,6 +104,32 @@
     
 }
 
+
+-(void)buttonClicked{
+    
+    if ([_inputTextField.text isEqualToString:_codeView.changeString ] || [_inputTextField.text isEqualToString:[_codeView.changeString lowercaseString]]) {
+        //弹出正确
+        UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"恭喜您" message:@"验证成功" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        
+        [alertView show];
+        
+        
+    }else{
+        
+        //验证码不匹配，验证码和输入框晃动
+        
+        CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
+        
+        animation.repeatCount = 1;
+        
+        animation.values = @[@-20,@20,@-20];
+        
+        [_codeView.layer addAnimation:animation forKey:nil];
+        
+//        [_inputTextField.layer addAnimation:animation forKey:nil];
+        
+    }
+}
 
 #pragma mark --UITextFieldDelegate
 

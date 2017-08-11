@@ -58,6 +58,12 @@
 		C56405E21F347AB8006ABE77 /* notEven.gif in Resources */ = {isa = PBXBuildFile; fileRef = C56405BF1F347AB8006ABE77 /* notEven.gif */; };
 		C582BF591F3859C4001CBEED /* suijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF581F3859C4001CBEED /* suijiViewController.m */; };
 		C582BF5C1F3859E4001CBEED /* CodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF5B1F3859E4001CBEED /* CodeView.m */; };
+		C59A1ACD1F39C60300240651 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = C59A1ACC1F39C60300240651 /* data.json */; };
+		C5A718B91F3AEBBD00D0F693 /* BUttonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A718B81F3AEBBD00D0F693 /* BUttonViewController.m */; };
+		C5CA2A791F3D5A4100464844 /* LoadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CA2A781F3D5A4100464844 /* LoadButton.m */; };
+		C5CA2A7E1F3D5B6F00464844 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7B1F3D5B6F00464844 /* data.json */; };
+		C5CA2A7F1F3D5B6F00464844 /* fengchedata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */; };
+		C5CA2A801F3D5B6F00464844 /* jiaxiaotongdata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +153,14 @@
 		C582BF581F3859C4001CBEED /* suijiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = suijiViewController.m; sourceTree = "<group>"; };
 		C582BF5A1F3859E4001CBEED /* CodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeView.h; sourceTree = "<group>"; };
 		C582BF5B1F3859E4001CBEED /* CodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeView.m; sourceTree = "<group>"; };
+		C59A1ACC1F39C60300240651 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		C5A718B71F3AEBBD00D0F693 /* BUttonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUttonViewController.h; sourceTree = "<group>"; };
+		C5A718B81F3AEBBD00D0F693 /* BUttonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUttonViewController.m; sourceTree = "<group>"; };
+		C5CA2A771F3D5A4100464844 /* LoadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadButton.h; sourceTree = "<group>"; };
+		C5CA2A781F3D5A4100464844 /* LoadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadButton.m; sourceTree = "<group>"; };
+		C5CA2A7B1F3D5B6F00464844 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fengchedata.json; sourceTree = "<group>"; };
+		C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jiaxiaotongdata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +223,7 @@
 		C518E0A31F330FD100F13113 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				C5A718B21F3AC11200D0F693 /* 登录按钮动画 */,
 				C582BF561F3858E0001CBEED /* 随机验证码 */,
 				C559A7661F382C230066F1EE /* AnimationEffectView */,
 				C564059B1F347AAC006ABE77 /* Resource */,
@@ -279,6 +294,7 @@
 		C56405941F346F80006ABE77 /* GIF */ = {
 			isa = PBXGroup;
 			children = (
+				C5CA2A7A1F3D5B6F00464844 /* DataJson */,
 				C56405951F346F91006ABE77 /* GifViewController.h */,
 				C56405961F346F91006ABE77 /* GifViewController.m */,
 			);
@@ -288,6 +304,7 @@
 		C564059B1F347AAC006ABE77 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C59A1ACC1F39C60300240651 /* data.json */,
 				C564059C1F347AB7006ABE77 /* Images */,
 			);
 			path = Resource;
@@ -344,6 +361,36 @@
 				C582BF5B1F3859E4001CBEED /* CodeView.m */,
 			);
 			path = "随机验证码";
+			sourceTree = "<group>";
+		};
+		C5A718B21F3AC11200D0F693 /* 登录按钮动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C5CA2A761F3D5A4100464844 /* LoadButton */,
+				C5A718B71F3AEBBD00D0F693 /* BUttonViewController.h */,
+				C5A718B81F3AEBBD00D0F693 /* BUttonViewController.m */,
+			);
+			name = "登录按钮动画";
+			path = "点击按钮弹出子菜单选择二";
+			sourceTree = "<group>";
+		};
+		C5CA2A761F3D5A4100464844 /* LoadButton */ = {
+			isa = PBXGroup;
+			children = (
+				C5CA2A771F3D5A4100464844 /* LoadButton.h */,
+				C5CA2A781F3D5A4100464844 /* LoadButton.m */,
+			);
+			path = LoadButton;
+			sourceTree = "<group>";
+		};
+		C5CA2A7A1F3D5B6F00464844 /* DataJson */ = {
+			isa = PBXGroup;
+			children = (
+				C5CA2A7B1F3D5B6F00464844 /* data.json */,
+				C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */,
+				C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */,
+			);
+			path = DataJson;
 			sourceTree = "<group>";
 		};
 		E0A2E835193A82AA457766A7 /* Frameworks */ = {
@@ -466,6 +513,7 @@
 				C56405D41F347AB8006ABE77 /* BB2.png in Resources */,
 				C56405D11F347AB8006ABE77 /* BB14.png in Resources */,
 				C56405CD1F347AB8006ABE77 /* BB10.png in Resources */,
+				C5CA2A7E1F3D5B6F00464844 /* data.json in Resources */,
 				C56405C71F347AB8006ABE77 /* 7.gif in Resources */,
 				C56405D81F347AB8006ABE77 /* BB6.png in Resources */,
 				C56405C11F347AB8006ABE77 /* 10.gif in Resources */,
@@ -479,6 +527,7 @@
 				C56405E11F347AB8006ABE77 /* google-io@3x.gif in Resources */,
 				C56405C51F347AB8006ABE77 /* 5.gif in Resources */,
 				C56405DB1F347AB8006ABE77 /* BB9.png in Resources */,
+				C59A1ACD1F39C60300240651 /* data.json in Resources */,
 				C56405D91F347AB8006ABE77 /* BB7.png in Resources */,
 				C56405CE1F347AB8006ABE77 /* BB11.png in Resources */,
 				C56405E21F347AB8006ABE77 /* notEven.gif in Resources */,
@@ -494,12 +543,14 @@
 				C56405CB1F347AB8006ABE77 /* BB0.png in Resources */,
 				C56405DE1F347AB8006ABE77 /* fdgdf.gif in Resources */,
 				C56405D71F347AB8006ABE77 /* BB5.png in Resources */,
+				C5CA2A801F3D5B6F00464844 /* jiaxiaotongdata.json in Resources */,
 				C56405DA1F347AB8006ABE77 /* BB8.png in Resources */,
 				C56405C01F347AB8006ABE77 /* 1.gif in Resources */,
 				C56405D31F347AB8006ABE77 /* BB16.png in Resources */,
 				C518E0AF1F330FD100F13113 /* Main.storyboard in Resources */,
 				C56405D61F347AB8006ABE77 /* BB4.png in Resources */,
 				C56405DF1F347AB8006ABE77 /* google-io.gif in Resources */,
+				C5CA2A7F1F3D5B6F00464844 /* fengchedata.json in Resources */,
 				C56405CC1F347AB8006ABE77 /* BB1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +627,8 @@
 				C564058F1F346C75006ABE77 /* PictureScanView.m in Sources */,
 				C56405931F346F3F006ABE77 /* PictureViewController.m in Sources */,
 				C559A7721F382C630066F1EE /* HWWaveViewController.m in Sources */,
+				C5CA2A791F3D5A4100464844 /* LoadButton.m in Sources */,
+				C5A718B91F3AEBBD00D0F693 /* BUttonViewController.m in Sources */,
 				C582BF591F3859C4001CBEED /* suijiViewController.m in Sources */,
 				C559A7691F382C230066F1EE /* HWWaveView.m in Sources */,
 				C518E0AC1F330FD100F13113 /* ViewController.m in Sources */,

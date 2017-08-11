@@ -8,6 +8,15 @@
 
 #import "GifViewController.h"
 
+
+#import <Lottie/Lottie.h>
+
+
+
+//屏幕的宽和高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 @interface GifViewController ()<OLImageViewDelegate>
 
 @property (nonatomic, getter=isRunning) BOOL running;
@@ -23,6 +32,8 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
+    //第一种加载方式
     OLImageView *gitAimv = [[OLImageView alloc] initWithImage:[OLImage imageNamed:@"notEven.gif"]];
     [gitAimv setFrame:CGRectMake(0, 64, 160, 160)];
     [gitAimv setUserInteractionEnabled:YES];
@@ -48,6 +59,23 @@
     [gitAimv setUserInteractionEnabled:YES];
     [gitAimv addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)]];
     [self.view addSubview:gitAimv];
+    
+    
+     //第二种加载方式
+    //【链接】大杀器Bodymovin和Lottie：把AE动画转换成HTML5/A
+    //http://www.cnblogs.com/zamhown/p/6688369.html
+    
+    LOTAnimationView *fengcheView = [LOTAnimationView animationNamed:@"fengchedata"];
+    fengcheView.frame = CGRectMake((kScreenWidth - 75)/2, kScreenHeight - 60 - 83 ,75 ,83) ;
+    fengcheView.contentMode = UIViewContentModeScaleToFill;
+    fengcheView.loopAnimation = YES;
+
+    fengcheView.userInteractionEnabled = NO;
+    [self.view addSubview:fengcheView];
+    [fengcheView playWithCompletion:^(BOOL animationFinished) {
+        NSLog(@"播放完毕");
+    }];
+    
     
 }
 
