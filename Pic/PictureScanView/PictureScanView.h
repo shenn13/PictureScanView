@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+@class PictureScanView;
+
+@interface PictureShowView : NSObject
+
++(PictureScanView *)showImageView:(UIImage *)image imageUrl:(NSString *)url;
+
+@end
+
 @class PictureScanView;
 
 @interface PictureScanView : UIView
-
-+ (instancetype)share;
 
 -(void)createUIWithImage:(UIImage *)image ImgUrl:(NSString *)imageUrl;
 

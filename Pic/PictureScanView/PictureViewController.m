@@ -29,7 +29,7 @@
 }
 -(void)buttonClicked{
     
-    [[PictureScanView share] createUIWithImage:[UIImage imageNamed:@"test0.jpg"] ImgUrl:nil];
+    [self.view addSubview:[PictureShowView showImageView:[UIImage imageNamed:@"test0"] imageUrl:nil]];
 
 
 }

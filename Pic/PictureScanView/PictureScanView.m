@@ -8,6 +8,24 @@
 
 #import "PictureScanView.h"
 
+//屏幕的宽和高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+@interface PictureShowView ()
+
+@end
+
+@implementation PictureShowView
+
++(PictureScanView *)showImageView:(UIImage *)image imageUrl:(NSString *)url{
+    PictureScanView *myPicture = [[PictureScanView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    [myPicture createUIWithImage:image ImgUrl:url];
+    return myPicture;
+}
+
+@end
+
 
 @interface PictureScanView ()<UIScrollViewDelegate>
 
@@ -19,17 +37,13 @@
 
 @implementation PictureScanView
 
-static PictureScanView *picView = nil;
-
-+(instancetype)share{
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
         
-        picView = [[PictureScanView alloc]init];
-        picView.userInteractionEnabled = YES;
-    });
-    return picView;
+    }
+    return self;
 }
 
 -(void)createUIWithImage:(UIImage *)image ImgUrl:(NSString *)imageUrl
@@ -37,7 +51,7 @@ static PictureScanView *picView = nil;
     if (imageUrl == nil && image == nil) {
         return;
     }
-    _scrollView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    _scrollView = [[UIScrollView alloc]initWithFrame:self.frame];
     _scrollView.delegate = self;
     _scrollView.minimumZoomScale = 1;
     _scrollView.maximumZoomScale = 3;
@@ -45,7 +59,7 @@ static PictureScanView *picView = nil;
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.backgroundColor = [UIColor blackColor];
-    self.imageView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.imageView = [[UIImageView alloc]initWithFrame:self.frame];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.userInteractionEnabled = YES;
     if (imageUrl == nil) {
@@ -67,16 +81,14 @@ static PictureScanView *picView = nil;
     singleClickDog.numberOfTouchesRequired = 1;
     doubleClickTap.numberOfTapsRequired = 2;//需要点两下
     twoFingerTap.numberOfTouchesRequired = 2;
-   
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window addSubview:self];
-    [window addSubview:_scrollView];
-    [_scrollView addSubview:_imageView];
-    [_scrollView setZoomScale:1];
     [_imageView addGestureRecognizer:doubleClickTap];
     [_imageView addGestureRecognizer:twoFingerTap];
     [singleClickDog requireGestureRecognizerToFail:doubleClickTap];//如果双击了，则不响应单击事件
-    [window addGestureRecognizer:singleClickDog];
+    [_imageView addGestureRecognizer:singleClickDog];
+    [_scrollView addSubview:_imageView];
+    [_scrollView setZoomScale:1];
+    [self addSubview:_scrollView];
+    
 }
 
 #pragma mark - ScrollView Delegate
@@ -93,15 +105,13 @@ static PictureScanView *picView = nil;
 #pragma mark - 事件处理
 -(void)singliDogTap:(UITapGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"---------------------");
     if (gestureRecognizer.numberOfTapsRequired == 1)
     {
-       [self removeFromSuperview];
-        [_scrollView removeFromSuperview];
+        [self removeFromSuperview];
     }
 }
 -(void)handleDoubleTap:(UITapGestureRecognizer *)gestureRecognizer{
-  
+    
     if (gestureRecognizer.numberOfTapsRequired == 2) {
         if(_scrollView.zoomScale == 1){
             float newScale = [_scrollView zoomScale] *2;
@@ -116,7 +126,7 @@ static PictureScanView *picView = nil;
 }
 
 -(void)handelTwoFingerTap:(UITapGestureRecognizer *)gestureRecongnizer{
-
+    
     float newScale = [_scrollView zoomScale]/2;
     CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecongnizer locationInView:gestureRecongnizer.view]];
     [_scrollView zoomToRect:zoomRect animated:YES];
