@@ -11,8 +11,9 @@
 #import "GifViewController.h"
 #import "HWWaveViewController.h"
 #import "suijiViewController.h"
-
 #import "BUttonViewController.h"
+#import "ButtonImageViewController.h"
+
 @interface ViewController (){
     NSArray *_dataArr;
 }
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效",@"获取随机验证码",@"登录按钮动画"];
+    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效",@"获取随机验证码",@"登录按钮动画",@"button图片文字样式"];
   
 }
 
@@ -67,6 +68,11 @@
         
         [self.navigationController pushViewController:[BUttonViewController new] animated:YES];
     }
+    if (indexPath.row == 5) {
+         [self.navigationController pushViewController:[ButtonImageViewController new] animated:YES];
+      
+    }
+    
     
     
     

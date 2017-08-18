@@ -16,6 +16,8 @@
 		C518E0B41F330FD100F13113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C518E0B21F330FD100F13113 /* LaunchScreen.storyboard */; };
 		C518E0BF1F330FD100F13113 /* PicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C518E0BE1F330FD100F13113 /* PicTests.m */; };
 		C518E0CA1F330FD100F13113 /* PicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C518E0C91F330FD100F13113 /* PicUITests.m */; };
+		C537B0611F46988100A0CEB3 /* ButtonImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C537B0601F46988100A0CEB3 /* ButtonImageViewController.m */; };
+		C537B0641F4698BE00A0CEB3 /* UIButton+CustomIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = C537B0631F4698BE00A0CEB3 /* UIButton+CustomIcon.m */; };
 		C559A7691F382C230066F1EE /* HWWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7681F382C230066F1EE /* HWWaveView.m */; };
 		C559A7721F382C630066F1EE /* HWWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C559A7711F382C630066F1EE /* HWWaveViewController.m */; };
 		C564058F1F346C75006ABE77 /* PictureScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = C564058E1F346C75006ABE77 /* PictureScanView.m */; };
@@ -103,6 +105,10 @@
 		C518E0C51F330FD100F13113 /* PicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C518E0C91F330FD100F13113 /* PicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicUITests.m; sourceTree = "<group>"; };
 		C518E0CB1F330FD100F13113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C537B05F1F46988100A0CEB3 /* ButtonImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonImageViewController.h; sourceTree = "<group>"; };
+		C537B0601F46988100A0CEB3 /* ButtonImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonImageViewController.m; sourceTree = "<group>"; };
+		C537B0621F4698BE00A0CEB3 /* UIButton+CustomIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CustomIcon.h"; sourceTree = "<group>"; };
+		C537B0631F4698BE00A0CEB3 /* UIButton+CustomIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CustomIcon.m"; sourceTree = "<group>"; };
 		C559A7671F382C230066F1EE /* HWWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWaveView.h; sourceTree = "<group>"; };
 		C559A7681F382C230066F1EE /* HWWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWaveView.m; sourceTree = "<group>"; };
 		C559A7701F382C630066F1EE /* HWWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWaveViewController.h; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 		C518E0A31F330FD100F13113 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				C537B05E1F46985900A0CEB3 /* Button图片文字样式 */,
 				C5A718B21F3AC11200D0F693 /* 登录按钮动画 */,
 				C582BF561F3858E0001CBEED /* 随机验证码 */,
 				C559A7661F382C230066F1EE /* AnimationEffectView */,
@@ -267,6 +274,18 @@
 				C518E0CB1F330FD100F13113 /* Info.plist */,
 			);
 			path = PicUITests;
+			sourceTree = "<group>";
+		};
+		C537B05E1F46985900A0CEB3 /* Button图片文字样式 */ = {
+			isa = PBXGroup;
+			children = (
+				C537B05F1F46988100A0CEB3 /* ButtonImageViewController.h */,
+				C537B0601F46988100A0CEB3 /* ButtonImageViewController.m */,
+				C537B0621F4698BE00A0CEB3 /* UIButton+CustomIcon.h */,
+				C537B0631F4698BE00A0CEB3 /* UIButton+CustomIcon.m */,
+			);
+			name = "Button图片文字样式";
+			path = Button;
 			sourceTree = "<group>";
 		};
 		C559A7661F382C230066F1EE /* AnimationEffectView */ = {
@@ -631,9 +650,11 @@
 				C5A718B91F3AEBBD00D0F693 /* BUttonViewController.m in Sources */,
 				C582BF591F3859C4001CBEED /* suijiViewController.m in Sources */,
 				C559A7691F382C230066F1EE /* HWWaveView.m in Sources */,
+				C537B0611F46988100A0CEB3 /* ButtonImageViewController.m in Sources */,
 				C518E0AC1F330FD100F13113 /* ViewController.m in Sources */,
 				C56405971F346F91006ABE77 /* GifViewController.m in Sources */,
 				C518E0A91F330FD100F13113 /* AppDelegate.m in Sources */,
+				C537B0641F4698BE00A0CEB3 /* UIButton+CustomIcon.m in Sources */,
 				C518E0A61F330FD100F13113 /* main.m in Sources */,
 				C582BF5C1F3859E4001CBEED /* CodeView.m in Sources */,
 			);
