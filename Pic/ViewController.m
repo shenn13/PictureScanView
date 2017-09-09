@@ -14,6 +14,7 @@
 #import "BUttonViewController.h"
 #import "ButtonImageViewController.h"
 
+#import "CenterViewController.h"
 @interface ViewController (){
     NSArray *_dataArr;
 }
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效",@"获取随机验证码",@"登录按钮动画",@"button图片文字样式"];
+    _dataArr = @[@"手势点击放大缩小图片封装",@"加载GIF动画",@"水波纹特效",@"获取随机验证码",@"登录按钮动画",@"button图片文字样式",@"个人中心"];
   
 }
 
@@ -72,16 +73,19 @@
          [self.navigationController pushViewController:[ButtonImageViewController new] animated:YES];
       
     }
+    if (indexPath.row == 6) {
+        [self.navigationController pushViewController:[CenterViewController new] animated:YES];
+        
+    }
     
     
-    
+
     
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;{
     return 80;
 }
-
 
 
 

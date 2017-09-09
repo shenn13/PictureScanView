@@ -66,6 +66,8 @@
 		C5CA2A7E1F3D5B6F00464844 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7B1F3D5B6F00464844 /* data.json */; };
 		C5CA2A7F1F3D5B6F00464844 /* fengchedata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */; };
 		C5CA2A801F3D5B6F00464844 /* jiaxiaotongdata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */; };
+		C5FC52221F4FD82E002F05C1 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC52211F4FD82E002F05C1 /* CenterViewController.m */; };
+		C5FC52261F4FD84C002F05C1 /* WRCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC52251F4FD84C002F05C1 /* WRCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,10 @@
 		C5CA2A7B1F3D5B6F00464844 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fengchedata.json; sourceTree = "<group>"; };
 		C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jiaxiaotongdata.json; sourceTree = "<group>"; };
+		C5FC52201F4FD82E002F05C1 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		C5FC52211F4FD82E002F05C1 /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		C5FC52241F4FD84C002F05C1 /* WRCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCellView.h; sourceTree = "<group>"; };
+		C5FC52251F4FD84C002F05C1 /* WRCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +235,7 @@
 		C518E0A31F330FD100F13113 /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				C5FC521F1F4FD818002F05C1 /* 个人中心 */,
 				C537B05E1F46985900A0CEB3 /* Button图片文字样式 */,
 				C5A718B21F3AC11200D0F693 /* 登录按钮动画 */,
 				C582BF561F3858E0001CBEED /* 随机验证码 */,
@@ -410,6 +417,25 @@
 				C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */,
 			);
 			path = DataJson;
+			sourceTree = "<group>";
+		};
+		C5FC521F1F4FD818002F05C1 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				C5FC52231F4FD84C002F05C1 /* WRCellView */,
+				C5FC52201F4FD82E002F05C1 /* CenterViewController.h */,
+				C5FC52211F4FD82E002F05C1 /* CenterViewController.m */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		C5FC52231F4FD84C002F05C1 /* WRCellView */ = {
+			isa = PBXGroup;
+			children = (
+				C5FC52241F4FD84C002F05C1 /* WRCellView.h */,
+				C5FC52251F4FD84C002F05C1 /* WRCellView.m */,
+			);
+			path = WRCellView;
 			sourceTree = "<group>";
 		};
 		E0A2E835193A82AA457766A7 /* Frameworks */ = {
@@ -654,9 +680,11 @@
 				C518E0AC1F330FD100F13113 /* ViewController.m in Sources */,
 				C56405971F346F91006ABE77 /* GifViewController.m in Sources */,
 				C518E0A91F330FD100F13113 /* AppDelegate.m in Sources */,
+				C5FC52261F4FD84C002F05C1 /* WRCellView.m in Sources */,
 				C537B0641F4698BE00A0CEB3 /* UIButton+CustomIcon.m in Sources */,
 				C518E0A61F330FD100F13113 /* main.m in Sources */,
 				C582BF5C1F3859E4001CBEED /* CodeView.m in Sources */,
+				C5FC52221F4FD82E002F05C1 /* CenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
