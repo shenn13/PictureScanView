@@ -9,7 +9,9 @@
 #import "BUttonViewController.h"
 #import "LoadButton.h"
 
-@interface BUttonViewController ()
+@interface BUttonViewController (){
+     NSInteger i;
+}
 
 @end
 
@@ -19,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    i = 0;
     self.view.backgroundColor = [UIColor whiteColor];
     
     LoadButton *_btn = [[LoadButton alloc]initWithFrame:CGRectMake(20, 120, CGRectGetWidth(self.view.frame) - 40, 44.f)];
@@ -31,8 +34,11 @@
     [self.view addSubview:_btn];
 }
 -(void)btnClicked:(LoadButton*)sender{
-    
+   
+    i ++;
     [sender toggle];
+    
+    NSLog(@"暴力点击==========%ld",(long)i);
 }
 
 /*

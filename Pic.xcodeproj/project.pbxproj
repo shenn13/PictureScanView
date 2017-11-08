@@ -68,6 +68,7 @@
 		C5CA2A7E1F3D5B6F00464844 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7B1F3D5B6F00464844 /* data.json */; };
 		C5CA2A7F1F3D5B6F00464844 /* fengchedata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */; };
 		C5CA2A801F3D5B6F00464844 /* jiaxiaotongdata.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */; };
+		C5E317301FB2E088003F575C /* UIControl+SingleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E3172F1FB2E088003F575C /* UIControl+SingleAction.m */; };
 		C5FC52221F4FD82E002F05C1 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC52211F4FD82E002F05C1 /* CenterViewController.m */; };
 		C5FC52261F4FD84C002F05C1 /* WRCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC52251F4FD84C002F05C1 /* WRCellView.m */; };
 /* End PBXBuildFile section */
@@ -175,6 +176,8 @@
 		C5CA2A7B1F3D5B6F00464844 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		C5CA2A7C1F3D5B6F00464844 /* fengchedata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fengchedata.json; sourceTree = "<group>"; };
 		C5CA2A7D1F3D5B6F00464844 /* jiaxiaotongdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jiaxiaotongdata.json; sourceTree = "<group>"; };
+		C5E3172E1FB2E088003F575C /* UIControl+SingleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SingleAction.h"; sourceTree = "<group>"; };
+		C5E3172F1FB2E088003F575C /* UIControl+SingleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SingleAction.m"; sourceTree = "<group>"; };
 		C5FC52201F4FD82E002F05C1 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
 		C5FC52211F4FD82E002F05C1 /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		C5FC52241F4FD84C002F05C1 /* WRCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCellView.h; sourceTree = "<group>"; };
@@ -432,6 +435,8 @@
 		C5CA2A761F3D5A4100464844 /* LoadButton */ = {
 			isa = PBXGroup;
 			children = (
+				C5E3172E1FB2E088003F575C /* UIControl+SingleAction.h */,
+				C5E3172F1FB2E088003F575C /* UIControl+SingleAction.m */,
 				C5CA2A771F3D5A4100464844 /* LoadButton.h */,
 				C5CA2A781F3D5A4100464844 /* LoadButton.m */,
 			);
@@ -707,6 +712,7 @@
 				C582BF591F3859C4001CBEED /* suijiViewController.m in Sources */,
 				C559A7691F382C230066F1EE /* HWWaveView.m in Sources */,
 				C537B0611F46988100A0CEB3 /* ButtonImageViewController.m in Sources */,
+				C5E317301FB2E088003F575C /* UIControl+SingleAction.m in Sources */,
 				C518E0AC1F330FD100F13113 /* ViewController.m in Sources */,
 				C56405971F346F91006ABE77 /* GifViewController.m in Sources */,
 				C518E0A91F330FD100F13113 /* AppDelegate.m in Sources */,
